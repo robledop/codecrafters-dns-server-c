@@ -1,0 +1,3 @@
+/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/dns-server.dir
+/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/rebuild_cache.dir

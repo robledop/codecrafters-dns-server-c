@@ -1,0 +1,5 @@
+# ninja log v6
+0	22	1741452268921807644	CMakeFiles/dns-server.dir/src/main.c.o	c307151079e3a90b
+23	37	1741452268944808076	dns-server	b377f8cabf8002dc
+0	25	1741452318265734601	CMakeFiles/dns-server.dir/src/main.c.o	c307151079e3a90b
+25	36	1741452318290735071	dns-server	b377f8cabf8002dc
