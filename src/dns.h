@@ -10,7 +10,7 @@
 #define DNS_FLAG_RA     (1 << 7)
 #define DNS_FLAG_Z      (0b111 << 4)
 #define DNS_FLAG_RCODE  (0b1111)
-    
+
 struct dns_header
 {
     uint16_t id;
@@ -19,14 +19,14 @@ struct dns_header
     uint16_t ancount;
     uint16_t nscount;
     uint16_t arcount;
-} __attribute__((__packed__));
+} __attribute__((packed));
 
 struct dns_question
 {
     char* qname;
     uint16_t qtype;
     uint16_t qclass;
-} __attribute__((packed));
+};
 
 struct dns_record
 {
@@ -35,7 +35,7 @@ struct dns_record
     uint16_t class;
     uint32_t ttl;
     uint16_t rdlength;
-} __attribute__((packed));
+};
 
 struct dns_message
 {
@@ -44,4 +44,4 @@ struct dns_message
     struct dns_record* answers;
     struct dns_record* authorities;
     struct dns_record* additionals;
-} __attribute__((packed));
+};
