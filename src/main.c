@@ -362,14 +362,7 @@ int parse_message(char* buffer, struct dns_message* message_out)
     printf("Answers length: %d\n", reply_answers_length);
 
     printf("ID: %d, ", htons(message_out->header.id));
-    printf("FLAGS: %016B \n", (*(uint32_t*)(buffer)) & 0xFf00);
     
-    // ReSharper disable once CppPrintfBadFormat
-    // ReSharper disable once CppPrintfExtraArg
-    printf("Flags: %016B ", message_out->header.qr << 16 | message_out->header.opcode << 12 |
-           message_out->header.aa << 11 | message_out->header.tc << 10 |
-           message_out->header.rd << 9 | message_out->header.ra << 7 |
-           message_out->header.z << 4 | message_out->header.rcode);
     printf("QR: %d, ", message_out->header.qr);
     printf("Opcode: %d, ", message_out->header.opcode);
     printf("AA: %d, ", message_out->header.aa);
