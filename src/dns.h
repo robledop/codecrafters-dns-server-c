@@ -4,19 +4,31 @@
 
 #define HEADER_SIZE 12
 
-#define DNS_FLAG_QR     (1 << 7)
-#define DNS_FLAG_OPCODE (0b1111 << 11)
-#define DNS_FLAG_AA     (1 << 10)
-#define DNS_FLAG_TC     (1 << 9)
-#define DNS_FLAG_RD     (1 << 8)
-#define DNS_FLAG_RA     (1 << 7)
-#define DNS_FLAG_Z      (0b111 << 4)
-#define DNS_FLAG_RCODE  (0b1111)
+// ###############################################
+// # QR | OPCODE | AA | TC | RD | RA | Z | RCODE |
+// # 1  | 4      | 1  | 1  | 1  | 1  | 3 | 4     | 
+// ###############################################
+
+#define DNS_FLAG_QR 0x8000
+#define DNS_FLAG_OPCODE 0x7800
+#define DNS_FLAG_AA 0x0400
+#define DNS_FLAG_TC 0x0200
+#define DNS_FLAG_RD 0x0100
+#define DNS_FLAG_RA 0x0080
+#define DNS_FLAG_Z 0x0070
+#define DNS_FLAG_RCODE 0x000f
 
 struct dns_header
 {
     uint16_t id;
-    uint16_t flags;
+    uint32_t rd : 1;
+    uint32_t tc : 1;
+    uint32_t aa : 1;
+    uint32_t opcode : 4;
+    uint32_t qr : 1;
+    uint32_t rcode : 4;
+    uint32_t z : 3;
+    uint32_t ra : 1;
     uint16_t qdcount;
     uint16_t ancount;
     uint16_t nscount;
