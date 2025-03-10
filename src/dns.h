@@ -62,7 +62,7 @@ struct q_name
 struct dns_question* parse_questions(char* buffer, int qdcount, int* questions_length);
 struct dns_record* parse_answers(char* buffer, int questions_length, int ancount, int* answers_length);
 struct q_name* decode_domain_name(const char* buffer);
-int encode_question(const char* domain_name, uint16_t qtype, uint16_t qclass, char encoded_domain_name[static 256]);
+int encode_question(const char* domain_name, uint16_t qtype, uint16_t qclass, char encoded_question[static 256]);
 int encode_record(
     const char domain_name[256],
     uint16_t qtype,
@@ -72,5 +72,5 @@ int encode_record(
     uint8_t data[static 1],
     char encoded_record[static 256]
 );
-void pack_message(struct dns_message message, char (*response)[512]);
-void parse_message(char* buffer, struct dns_message* message);
+int pack_message(struct dns_message message, char (*output)[512]);
+int parse_message(char* buffer, struct dns_message* message_out);

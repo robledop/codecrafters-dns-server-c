@@ -75,20 +75,28 @@ int main()
         message.header.ancount = 1 << 8;
 
         char response[512];
-        pack_message(message, &response);
+        const int response_size = pack_message(message, &response);
 
         printf("Parsing response...\n");
         struct dns_message reply_message = {0};
         parse_message(response, &reply_message);
 
         // Send response
-        if (sendto(udp_socket, response, sizeof(struct dns_message), 0, (struct sockaddr*)&client_address,
+        if (sendto(udp_socket, response, response_size, 0, (struct sockaddr*)&client_address,
                    sizeof(client_address)) == -1)
         {
             perror("Failed to send response");
         }
 
-        free(message.questions);
+        if (message.questions != NULL)
+        {
+            free(message.questions);
+        }
+
+        if (message.answers != NULL)
+        {
+            free(message.answers);
+        }
     }
 
     close(udp_socket);
@@ -129,7 +137,7 @@ struct dns_record* parse_answers(char* buffer, int questions_length, int ancount
 
         answers[i].type = (*(uint16_t*)(buffer + HEADER_SIZE + questions_length + q_name->qname_length));
         answers[i].class = (*(uint16_t*)(buffer + HEADER_SIZE + questions_length + q_name->qname_length + 2));
-        
+
         answers[i].ttl = (*(uint32_t*)(buffer + HEADER_SIZE + questions_length + q_name->qname_length + 4)) >> 24
             | (*(uint32_t*)(buffer + HEADER_SIZE + questions_length + q_name->qname_length + 5)) >> 16
             | (*(uint32_t*)(buffer + HEADER_SIZE + questions_length + q_name->qname_length + 6)) >> 8
@@ -154,10 +162,10 @@ int encode_question(
     const char domain_name[256],
     const uint16_t qtype,
     const uint16_t qclass,
-    char encoded_domain_name[static 256]
+    char encoded_question[static 256]
 )
 {
-    if (encoded_domain_name == NULL)
+    if (encoded_question == NULL)
     {
         return -1;
     }
@@ -170,19 +178,19 @@ int encode_question(
     while (token != nullptr)
     {
         const int len = (int)strlen(token);
-        encoded_domain_name[i] = (char)len;
+        encoded_question[i] = (char)len;
         i += 1;
-        strcpy(encoded_domain_name + i, token);
+        strcpy(encoded_question + i, token);
         i += len;
         token = strtok(nullptr, ".");
     }
 
-    encoded_domain_name[i++] = '\0';
+    encoded_question[i++] = '\0';
 
-    encoded_domain_name[i++] = (char)(qtype >> 8);
-    encoded_domain_name[i++] = (char)(qtype & 0xff);
-    encoded_domain_name[i++] = (char)(qclass >> 8);
-    encoded_domain_name[i++] = (char)(qclass & 0xff);
+    encoded_question[i++] = (char)(qtype >> 8);
+    encoded_question[i++] = (char)(qtype & 0xff);
+    encoded_question[i++] = (char)(qclass >> 8);
+    encoded_question[i++] = (char)(qclass & 0xff);
 
     free(domain_name_copy);
 
@@ -193,8 +201,8 @@ int encode_record(
     const char* domain_name,
     const uint16_t qtype,
     const uint16_t qclass,
-    uint32_t ttl,
-    uint16_t rdlength,
+    const uint32_t ttl,
+    const uint16_t rdlength,
     uint8_t data[static 1],
     char encoded_record[static 256]
 )
@@ -207,20 +215,16 @@ int encode_record(
     char* domain_name_copy = strdup(domain_name);
 
 
-    int size = encode_question(domain_name_copy, qtype, qclass, encoded_record);
+    const int size = encode_question(domain_name_copy, qtype, qclass, encoded_record);
 
-    uint32_t ttl_be = htonl(ttl);
-    uint16_t rdlength_be = htons(rdlength);
+    const uint32_t ttl_be = htonl(ttl);
+    const uint16_t rdlength_be = htons(rdlength);
 
     // TTL 4-byte big-endian
-    encoded_record[size] = (char)(ttl_be >> 24);
-    encoded_record[size + 1] = (char)(ttl_be >> 16);
-    encoded_record[size + 2] = (char)(ttl_be >> 8);
-    encoded_record[size + 3] = (char)(ttl_be & 0xff);
+    memcpy(encoded_record + size, &ttl_be, sizeof(ttl_be));
 
     // RDLength 2-byte big-endian
-    encoded_record[size + 4] = (char)(rdlength_be >> 8);
-    encoded_record[size + 5] = (char)(rdlength_be & 0xff);
+    memcpy(encoded_record + size + 4, &rdlength_be, sizeof(rdlength_be));
 
     // Data 4-byte big-endian
     memcpy(encoded_record + size + 6, data, rdlength);
@@ -271,15 +275,17 @@ struct q_name* decode_domain_name(const char* buffer)
     return q_name;
 }
 
-void pack_message(struct dns_message message, char (*response)[512])
+int pack_message(struct dns_message message, char (*output)[512])
 {
-    memset(response, 0, 512);
-    memcpy(*response, &message.header, sizeof(struct dns_header));
+    memset(output, 0, 512);
+    memcpy(*output, &message.header, sizeof(struct dns_header));
+
+    int questions_length = 0;
+    int answers_length = 0;
 
     // Copy questions
     if (message.questions != NULL)
     {
-        int questions_length = 0;
         for (int i = 0; i < ntohs(message.header.qdcount); i++)
         {
             char* encoded_domain_name = malloc(256);
@@ -292,7 +298,7 @@ void pack_message(struct dns_message message, char (*response)[512])
                 encoded_domain_name);
 
             memcpy(
-                &(*response)[HEADER_SIZE],
+                &(*output)[HEADER_SIZE],
                 encoded_domain_name,
                 size
             );
@@ -303,7 +309,6 @@ void pack_message(struct dns_message message, char (*response)[512])
         }
 
         // Add answers
-        int answers_length = 0;
         for (int i = 0; i < ntohs(message.header.qdcount); i++)
         {
             uint8_t data[4] = {8, 8, 8, 8};
@@ -321,7 +326,7 @@ void pack_message(struct dns_message message, char (*response)[512])
                 encoded_record
             );
 
-            memcpy(&(*response)[HEADER_SIZE + questions_length + answers_length], &encoded_record,
+            memcpy(&(*output)[HEADER_SIZE + questions_length + answers_length], encoded_record,
                    record_size);
 
             free(encoded_record);
@@ -329,58 +334,64 @@ void pack_message(struct dns_message message, char (*response)[512])
             answers_length += record_size;
         }
     }
+
+    return HEADER_SIZE + questions_length + answers_length;
 }
 
-void parse_message(char* buffer, struct dns_message* message)
+int parse_message(char* buffer, struct dns_message* message_out)
 {
     struct dns_header header = {0};
     memcpy(&header, buffer, sizeof(struct dns_header));
 
-    message->header = header;
+    message_out->header = header;
     int reply_questions_length = 0;
-    message->questions = parse_questions(buffer, htons(message->header.qdcount),
-                                         &reply_questions_length);
+    message_out->questions = parse_questions(buffer, htons(message_out->header.qdcount),
+                                             &reply_questions_length);
     printf("Questions length: %d\n", reply_questions_length);
 
     int reply_answers_length = 0;
-    message->answers = parse_answers(buffer, reply_questions_length, htons(message->header.ancount),
-                                     &reply_answers_length);
+    message_out->answers = parse_answers(buffer, reply_questions_length, htons(message_out->header.ancount),
+                                         &reply_answers_length);
     printf("Answers length: %d\n", reply_answers_length);
 
-    printf("ID: %d, ", htons(message->header.id));
-    printf("Flags: %b, ", message->header.flags);
-    printf("QR: %d, ", (message->header.flags & DNS_FLAG_QR) == DNS_FLAG_QR);
-    printf("Opcode: %d, ", (message->header.flags & DNS_FLAG_OPCODE) >> 11);
-    printf("AA: %d, ", (message->header.flags & DNS_FLAG_AA) == DNS_FLAG_AA);
-    printf("TC: %d, ", (message->header.flags & DNS_FLAG_TC) == DNS_FLAG_TC);
-    printf("RD: %d, ", (message->header.flags & DNS_FLAG_RD) == DNS_FLAG_RD);
-    printf("RA: %d, ", (message->header.flags & DNS_FLAG_RA) == DNS_FLAG_RA);
-    printf("Z: %d, ", (message->header.flags & DNS_FLAG_Z) >> 4);
-    printf("RCODE: %d, ", (message->header.flags & DNS_FLAG_RCODE));
+    printf("ID: %d, ", htons(message_out->header.id));
+    // ReSharper disable once CppPrintfBadFormat
+    // ReSharper disable once CppPrintfExtraArg
+    printf("Flags: %B, ", message_out->header.flags);
+    printf("QR: %d, ", (message_out->header.flags & DNS_FLAG_QR) == DNS_FLAG_QR);
+    printf("Opcode: %d, ", (message_out->header.flags & DNS_FLAG_OPCODE) >> 11);
+    printf("AA: %d, ", (message_out->header.flags & DNS_FLAG_AA) == DNS_FLAG_AA);
+    printf("TC: %d, ", (message_out->header.flags & DNS_FLAG_TC) == DNS_FLAG_TC);
+    printf("RD: %d, ", (message_out->header.flags & DNS_FLAG_RD) == DNS_FLAG_RD);
+    printf("RA: %d, ", (message_out->header.flags & DNS_FLAG_RA) == DNS_FLAG_RA);
+    printf("Z: %d, ", (message_out->header.flags & DNS_FLAG_Z) >> 4);
+    printf("RCODE: %d, ", (message_out->header.flags & DNS_FLAG_RCODE));
 
-    printf("QDCount: %d, ", ntohs(message->header.qdcount));
-    printf("ANCount: %d\n", ntohs(message->header.ancount));
+    printf("QDCount: %d, ", ntohs(message_out->header.qdcount));
+    printf("ANCount: %d\n", ntohs(message_out->header.ancount));
 
-    for (int i = 0; i < ntohs(message->header.qdcount); i++)
+    for (int i = 0; i < ntohs(message_out->header.qdcount); i++)
     {
         printf("Question %d: ", i);
-        printf("QName: %s, ", message->questions[i].qname);
-        printf("QType: %d, ", ntohs(message->questions[i].qtype));
-        printf("QClass: %d\n", ntohs(message->questions[i].qclass));
+        printf("QName: %s, ", message_out->questions[i].qname);
+        printf("QType: %d, ", ntohs(message_out->questions[i].qtype));
+        printf("QClass: %d\n", ntohs(message_out->questions[i].qclass));
     }
 
     for (int i = 0; i < ntohs(header.ancount); i++)
     {
         printf("Answer %d: ", i);
-        printf("Name: %s, ", message->answers[i].name);
-        printf("Type: %d, ", ntohs(message->answers[i].type));
-        printf("Class: %d ", ntohs(message->answers[i].class));
-        printf("TTL: %d, ", ntohl(message->answers[i].ttl));
-        printf("RDLength: %d, ", ntohs(message->answers[i].rdlength));
+        printf("Name: %s, ", message_out->answers[i].name);
+        printf("Type: %d, ", ntohs(message_out->answers[i].type));
+        printf("Class: %d ", ntohs(message_out->answers[i].class));
+        printf("TTL: %d, ", ntohl(message_out->answers[i].ttl));
+        printf("RDLength: %d, ", ntohs(message_out->answers[i].rdlength));
         printf("RData: %d.%d.%d.%d\n",
-               message->answers[i].rdata[3],
-               message->answers[i].rdata[2],
-               message->answers[i].rdata[1],
-               message->answers[i].rdata[0]);
+               message_out->answers[i].rdata[3],
+               message_out->answers[i].rdata[2],
+               message_out->answers[i].rdata[1],
+               message_out->answers[i].rdata[0]);
     }
+
+    return HEADER_SIZE + reply_questions_length + reply_answers_length;
 }
