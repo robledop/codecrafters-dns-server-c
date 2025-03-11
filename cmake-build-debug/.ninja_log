@@ -5,3 +5,11 @@
 4	61	1741650037390819549	CMakeFiles/dns-server.dir/src/main.c.o	c307151079e3a90b
 1	69	1741650037387819497	CMakeFiles/dns-server.dir/src/dns.c.o	84cb183dbafb3596
 69	83	1741650037455820692	dns-server	4cef72d6b4f27fc1
+1	108	1741705264881775088	CMakeFiles/dns-server.dir/src/main.c.o	c307151079e3a90b
+1	108	1741705264881775088	CMakeFiles/dns-server.dir/src/dns.c.o	84cb183dbafb3596
+108	131	1741705264988777045	dns-server	4cef72d6b4f27fc1
+1	35	1741705363788584036	CMakeFiles/dns-server.dir/src/main.c.o	c307151079e3a90b
+35	48	1741705363822584658	dns-server	4cef72d6b4f27fc1
+1	34	1741714485222052040	CMakeFiles/dns-server.dir/src/main.c.o	c307151079e3a90b
+0	42	1741714485221052021	CMakeFiles/dns-server.dir/src/dns.c.o	84cb183dbafb3596
+42	54	1741714485264052829	dns-server	4cef72d6b4f27fc1

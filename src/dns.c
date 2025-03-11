@@ -13,8 +13,6 @@ struct dns_question* parse_questions(char* buffer, int qdcount, int* questions_l
         // We have a compressed label
         if (q_name->offset > 0)
         {
-            printf("\033[0;31m" "Compressed label detected" "\033[0m" "\n");
-
             struct q_name* q_name_compressed = decode_domain_name((char*)(buffer + q_name->offset));
             memcpy(questions[i].qname + strlen(q_name->name), q_name_compressed->name, 256);
             q_name->qname_length -= 1;
@@ -171,31 +169,31 @@ struct q_name* decode_domain_name(const char* buffer)
         }
     }
 
-    q_name->qname_length = i +  1;
+    q_name->qname_length = i + 1;
 
     return q_name;
 }
 
-int pack_message(struct dns_message message, char (*output)[512])
+int pack_message(struct dns_message* message, char (*output)[512])
 {
     memset(output, 0, 512);
-    memcpy(*output, &(message.header), sizeof(struct dns_header));
+    memcpy(*output, &(message->header), sizeof(struct dns_header));
 
     int questions_length = 0;
     int answers_length = 0;
 
     // Copy questions
-    if (message.questions != NULL)
+    if (message->questions != NULL)
     {
-        for (int i = 0; i < ntohs(message.header.qdcount); i++)
+        for (int i = 0; i < ntohs(message->header.qdcount); i++)
         {
             char* encoded_domain_name = malloc(256);
             memset(encoded_domain_name, 0, 256);
 
             const int size = encode_question(
-                message.questions[i].qname,
-                htons(message.questions[i].qtype),
-                htons(message.questions[i].qclass),
+                message->questions[i].qname,
+                htons(message->questions[i].qtype),
+                htons(message->questions[i].qclass),
                 encoded_domain_name);
 
             memcpy(
@@ -208,35 +206,33 @@ int pack_message(struct dns_message message, char (*output)[512])
 
             questions_length += size;
         }
+    }
 
-        // Add answers
-        for (int i = 0; i < ntohs(message.header.qdcount); i++)
-        {
-            uint8_t data[4] = {8, 8, 8, 8};
+    // Add answers
+    for (int i = 0; i < ntohs(message->header.ancount); i++)
+    {
+        char* encoded_record = malloc(256);
+        memset(encoded_record, 0, 256);
 
-            char* encoded_record = malloc(256);
-            memset(encoded_record, 0, 256);
+        const int record_size = encode_record(
+            message->answers[i].name,
+            htons(message->answers[i].type),
+            htons(message->answers[i].class),
+            htonl(message->answers[i].ttl),
+            sizeof(message->answers[i].rdata),
+            message->answers[i].rdata,
+            encoded_record
+        );
 
-            const int record_size = encode_record(
-                message.questions[i].qname,
-                htons(message.questions[i].qtype),
-                htons(message.questions[i].qclass),
-                60,
-                sizeof(data),
-                data,
-                encoded_record
-            );
+        memcpy(
+            &(*output)[HEADER_SIZE + questions_length + answers_length],
+            encoded_record,
+            record_size
+        );
 
-            memcpy(
-                &(*output)[HEADER_SIZE + questions_length + answers_length],
-                encoded_record,
-                record_size
-            );
+        free(encoded_record);
 
-            free(encoded_record);
-
-            answers_length += record_size;
-        }
+        answers_length += record_size;
     }
 
     return HEADER_SIZE + questions_length + answers_length;
@@ -287,10 +283,10 @@ int parse_message(char* buffer, struct dns_message* message_out)
         printf("TTL: %d, ", ntohl(message_out->answers[i].ttl));
         printf("RDLength: %d, ", ntohs(message_out->answers[i].rdlength));
         printf("RData: %d.%d.%d.%d\n",
-               message_out->answers[i].rdata[3],
-               message_out->answers[i].rdata[2],
+               message_out->answers[i].rdata[0],
                message_out->answers[i].rdata[1],
-               message_out->answers[i].rdata[0]);
+               message_out->answers[i].rdata[2],
+               message_out->answers[i].rdata[3]);
     }
 
     return HEADER_SIZE + reply_questions_length + reply_answers_length;

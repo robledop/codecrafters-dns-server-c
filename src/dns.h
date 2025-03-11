@@ -12,6 +12,12 @@
 #include <errno.h>
 #include <unistd.h>
 
+#define TERM_FORE_RED "\033[0;31m"
+#define TERM_FORE_GREEN "\033[0;32m"
+#define TERM_FORE_YELLOW "\033[0;33m"
+#define TERM_FORE_BLUE "\033[0;34m"
+#define TERM_RESET "\033[0m"
+
 #define HEADER_SIZE 12
 
 // ###############################################
@@ -102,12 +108,19 @@ struct q_name
     int offset;
 };
 
+struct dns_pool_item
+{
+    struct sockaddr_in* address;
+    struct dns_message* message;
+    struct dns_pool_item* next;
+};
+
 #define SET_QR_FLAG(header, value) header.flags = (header.flags & ~DNS_FLAG_QR) | (value << 7)
 
 
 struct dns_question* parse_questions(char* buffer, int qdcount, int* questions_length);
 struct dns_record* parse_answers(char* buffer, int questions_length, int ancount, int* answers_length);
-int pack_message(struct dns_message message, char (*output)[512]);
+int pack_message(struct dns_message* message, char (*output)[512]);
 int parse_message(char* buffer, struct dns_message* message_out);
 
 struct q_name* decode_domain_name(const char* buffer);
@@ -121,3 +134,9 @@ int encode_record(
     uint8_t data[static 1],
     char encoded_record[static 256]
 );
+
+
+void dns_pool_add(struct dns_pool_item** pool, struct dns_pool_item* item);
+struct dns_pool_item* dns_pool_find(struct dns_pool_item* pool, uint16_t id);
+void dns_pool_remove(struct dns_pool_item** pool, uint16_t id);
+void dns_pool_print(struct dns_pool_item* pool);
