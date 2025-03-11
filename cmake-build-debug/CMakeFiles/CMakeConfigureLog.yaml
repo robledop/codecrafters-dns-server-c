@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nTBwuK"
-      binary: "/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nTBwuK"
+      source: "/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-EiSOaZ"
+      binary: "/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-EiSOaZ"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,10 +71,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nTBwuK'
+        Change Dir: '/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-EiSOaZ'
         
-        Run Build Command(s): /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_681cc
-        [1/2] /home/robledo/opt/gcc-14.2.0/bin/gcc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o -c /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_01f0c
+        [1/2] /home/robledo/opt/gcc-14.2.0/bin/gcc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o -c /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/home/robledo/opt/gcc-14.2.0/bin/gcc
         Target: x86_64-pc-linux-gnu
@@ -82,8 +82,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 14.2.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_681cc.dir/'
-         /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_681cc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/ccRAXtNM.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_01f0c.dir/'
+         /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_01f0c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/cce0t3Cq.s
         GNU C17 (GCC) version 14.2.0 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 14.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
         
@@ -101,13 +101,13 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 6b801b5aa1d90279b48e149f7518dd0a
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_681cc.dir/'
-         /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/as -v --64 -o CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o /tmp/ccRAXtNM.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_01f0c.dir/'
+         /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/as -v --64 -o CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o /tmp/cce0t3Cq.s
         GNU assembler version 2.42 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.42
         COMPILER_PATH=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/
         LIBRARY_PATH=/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.'
-        [2/2] : && /home/robledo/opt/gcc-14.2.0/bin/gcc  -v -Wl,-v CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o -o cmTC_681cc   && :
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /home/robledo/opt/gcc-14.2.0/bin/gcc  -v -Wl,-v CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o -o cmTC_01f0c   && :
         Using built-in specs.
         COLLECT_GCC=/home/robledo/opt/gcc-14.2.0/bin/gcc
         COLLECT_LTO_WRAPPER=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper
@@ -118,12 +118,12 @@ events:
         gcc version 14.2.0 (GCC) 
         COMPILER_PATH=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/
         LIBRARY_PATH=/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_681cc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_681cc.'
-         /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccG9XBf0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_681cc /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_01f0c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_01f0c.'
+         /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb0FAJ4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_01f0c /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
         collect2 version 14.2.0
-        /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/ld -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccG9XBf0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_681cc /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
+        /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/ld -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb0FAJ4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_01f0c /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
         GNU ld (GNU Binutils) 2.42
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_681cc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_681cc.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_01f0c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_01f0c.'
         
       exitCode: 0
   -
@@ -164,10 +164,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nTBwuK']
+        ignore line: [Change Dir: '/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-EiSOaZ']
         ignore line: []
-        ignore line: [Run Build Command(s): /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_681cc]
-        ignore line: [[1/2] /home/robledo/opt/gcc-14.2.0/bin/gcc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o -c /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_01f0c]
+        ignore line: [[1/2] /home/robledo/opt/gcc-14.2.0/bin/gcc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o -c /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/robledo/opt/gcc-14.2.0/bin/gcc]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -175,8 +175,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_681cc.dir/']
-        ignore line: [ /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_681cc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/ccRAXtNM.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_01f0c.dir/']
+        ignore line: [ /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_01f0c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/cce0t3Cq.s]
         ignore line: [GNU C17 (GCC) version 14.2.0 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
         ignore line: []
@@ -194,13 +194,13 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 6b801b5aa1d90279b48e149f7518dd0a]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_681cc.dir/']
-        ignore line: [ /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/as -v --64 -o CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o /tmp/ccRAXtNM.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_01f0c.dir/']
+        ignore line: [ /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/as -v --64 -o CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o /tmp/cce0t3Cq.s]
         ignore line: [GNU assembler version 2.42 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.42]
         ignore line: [COMPILER_PATH=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/]
         ignore line: [LIBRARY_PATH=/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] : && /home/robledo/opt/gcc-14.2.0/bin/gcc  -v -Wl -v CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o -o cmTC_681cc   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /home/robledo/opt/gcc-14.2.0/bin/gcc  -v -Wl -v CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o -o cmTC_01f0c   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/robledo/opt/gcc-14.2.0/bin/gcc]
         ignore line: [COLLECT_LTO_WRAPPER=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper]
@@ -211,13 +211,13 @@ events:
         ignore line: [gcc version 14.2.0 (GCC) ]
         ignore line: [COMPILER_PATH=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/]
         ignore line: [LIBRARY_PATH=/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_681cc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_681cc.']
-        link line: [ /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccG9XBf0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_681cc /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_01f0c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_01f0c.']
+        link line: [ /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb0FAJ4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_01f0c /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
           arg [/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccG9XBf0.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccb0FAJ4.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -229,7 +229,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_681cc] ==> ignore
+          arg [cmTC_01f0c] ==> ignore
           arg [/lib/x86_64-linux-gnu/crt1.o] ==> obj [/lib/x86_64-linux-gnu/crt1.o]
           arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
           arg [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o] ==> obj [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o]
@@ -242,7 +242,7 @@ events:
           arg [-L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib] ==> dir [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib]
           arg [-L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../..] ==> dir [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
@@ -257,7 +257,7 @@ events:
           arg [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o] ==> obj [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o]
           arg [/lib/x86_64-linux-gnu/crtn.o] ==> obj [/lib/x86_64-linux-gnu/crtn.o]
         ignore line: [collect2 version 14.2.0]
-        ignore line: [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/ld -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccG9XBf0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_681cc /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_681cc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
+        ignore line: [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/ld -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb0FAJ4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_01f0c /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_01f0c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
         linker tool for 'C': /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/ld
         collapse library dir [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0] ==> [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0]
         collapse library dir [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64] ==> [/home/robledo/opt/gcc-14.2.0/lib64]
@@ -292,8 +292,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-QpF6Ba"
-      binary: "/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-QpF6Ba"
+      source: "/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TavAtt"
+      binary: "/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TavAtt"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -303,10 +303,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-QpF6Ba'
+        Change Dir: '/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TavAtt'
         
-        Run Build Command(s): /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_781f7
-        [1/2] /home/robledo/opt/gcc-14.2.0/bin/g++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o -c /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_9ea4b
+        [1/2] /home/robledo/opt/gcc-14.2.0/bin/g++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o -c /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/home/robledo/opt/gcc-14.2.0/bin/g++
         Target: x86_64-pc-linux-gnu
@@ -314,8 +314,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 14.2.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_781f7.dir/'
-         /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_781f7.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/ccQYEPal.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_9ea4b.dir/'
+         /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_9ea4b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/cc8VnF1N.s
         GNU C++17 (GCC) version 14.2.0 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 14.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
         
@@ -336,13 +336,13 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 678e2ef76b68646019d388ac1f1f67d1
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_781f7.dir/'
-         /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/as -v --64 -o CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccQYEPal.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_9ea4b.dir/'
+         /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/as -v --64 -o CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc8VnF1N.s
         GNU assembler version 2.42 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.42
         COMPILER_PATH=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/
         LIBRARY_PATH=/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] : && /home/robledo/opt/gcc-14.2.0/bin/g++  -v -Wl,-v CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_781f7   && :
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /home/robledo/opt/gcc-14.2.0/bin/g++  -v -Wl,-v CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_9ea4b   && :
         Using built-in specs.
         COLLECT_GCC=/home/robledo/opt/gcc-14.2.0/bin/g++
         COLLECT_LTO_WRAPPER=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper
@@ -353,12 +353,12 @@ events:
         gcc version 14.2.0 (GCC) 
         COMPILER_PATH=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/
         LIBRARY_PATH=/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_781f7' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_781f7.'
-         /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvjk3yP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_781f7 /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9ea4b' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_9ea4b.'
+         /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cccvftng.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9ea4b /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
         collect2 version 14.2.0
-        /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/ld -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvjk3yP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_781f7 /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
+        /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/ld -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cccvftng.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9ea4b /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
         GNU ld (GNU Binutils) 2.42
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_781f7' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_781f7.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9ea4b' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_9ea4b.'
         
       exitCode: 0
   -
@@ -405,10 +405,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-QpF6Ba']
+        ignore line: [Change Dir: '/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TavAtt']
         ignore line: []
-        ignore line: [Run Build Command(s): /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_781f7]
-        ignore line: [[1/2] /home/robledo/opt/gcc-14.2.0/bin/g++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o -c /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -v cmTC_9ea4b]
+        ignore line: [[1/2] /home/robledo/opt/gcc-14.2.0/bin/g++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o -c /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/robledo/opt/gcc-14.2.0/bin/g++]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -416,8 +416,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_781f7.dir/']
-        ignore line: [ /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_781f7.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/ccQYEPal.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_9ea4b.dir/']
+        ignore line: [ /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_9ea4b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/cc8VnF1N.s]
         ignore line: [GNU C++17 (GCC) version 14.2.0 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
         ignore line: []
@@ -438,13 +438,13 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 678e2ef76b68646019d388ac1f1f67d1]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_781f7.dir/']
-        ignore line: [ /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/as -v --64 -o CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccQYEPal.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_9ea4b.dir/']
+        ignore line: [ /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/as -v --64 -o CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc8VnF1N.s]
         ignore line: [GNU assembler version 2.42 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.42]
         ignore line: [COMPILER_PATH=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/]
         ignore line: [LIBRARY_PATH=/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] : && /home/robledo/opt/gcc-14.2.0/bin/g++  -v -Wl -v CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_781f7   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /home/robledo/opt/gcc-14.2.0/bin/g++  -v -Wl -v CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_9ea4b   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/robledo/opt/gcc-14.2.0/bin/g++]
         ignore line: [COLLECT_LTO_WRAPPER=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper]
@@ -455,13 +455,13 @@ events:
         ignore line: [gcc version 14.2.0 (GCC) ]
         ignore line: [COMPILER_PATH=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/]
         ignore line: [LIBRARY_PATH=/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib/:/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_781f7' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_781f7.']
-        link line: [ /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvjk3yP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_781f7 /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9ea4b' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_9ea4b.']
+        link line: [ /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cccvftng.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9ea4b /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
           arg [/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccvjk3yP.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cccvftng.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -473,7 +473,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_781f7] ==> ignore
+          arg [cmTC_9ea4b] ==> ignore
           arg [/lib/x86_64-linux-gnu/crt1.o] ==> obj [/lib/x86_64-linux-gnu/crt1.o]
           arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
           arg [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o] ==> obj [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o]
@@ -486,7 +486,7 @@ events:
           arg [-L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib] ==> dir [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib]
           arg [-L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../..] ==> dir [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -497,7 +497,7 @@ events:
           arg [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o] ==> obj [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o]
           arg [/lib/x86_64-linux-gnu/crtn.o] ==> obj [/lib/x86_64-linux-gnu/crtn.o]
         ignore line: [collect2 version 14.2.0]
-        ignore line: [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/ld -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvjk3yP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_781f7 /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_781f7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
+        ignore line: [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/ld -plugin /home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/home/robledo/opt/gcc-14.2.0/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cccvftng.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9ea4b /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/lib -L/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -v CMakeFiles/cmTC_9ea4b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
         linker tool for 'CXX': /home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../x86_64-pc-linux-gnu/bin/ld
         collapse library dir [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0] ==> [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0]
         collapse library dir [/home/robledo/opt/gcc-14.2.0/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64] ==> [/home/robledo/opt/gcc-14.2.0/lib64]

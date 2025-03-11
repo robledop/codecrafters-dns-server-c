@@ -1,4 +1,4 @@
-/home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -DCMAKE_C_COMPILER=/home/robledo/opt/gcc-14.2.0/bin/gcc -DCMAKE_CXX_COMPILER=/home/robledo/opt/gcc-14.2.0/bin/g++ -G Ninja -S /home/robledo/source/codecrafters-dns-server-c -B /home/robledo/source/codecrafters-dns-server-c/cmake-build-debug
+/home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/robledo/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -DCMAKE_C_COMPILER=/home/robledo/opt/gcc-14.2.0/bin/gcc -DCMAKE_CXX_COMPILER=/home/robledo/opt/gcc-14.2.0/bin/g++ -G Ninja -DPython_EXECUTABLE=/usr/bin/python3 -DPython3_EXECUTABLE=/usr/bin/python3 -S /home/robledo/source/codecrafters-dns-server-c -B /home/robledo/source/codecrafters-dns-server-c/cmake-build-debug
 -- The C compiler identification is GNU 14.2.0
 -- The CXX compiler identification is GNU 14.2.0
 -- Detecting C compiler ABI info
@@ -11,6 +11,13 @@
 -- Check for working CXX compiler: /home/robledo/opt/gcc-14.2.0/bin/g++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done (0.3s)
+-- Configuring done (0.5s)
 -- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    Python3_EXECUTABLE
+    Python_EXECUTABLE
+
+
 -- Build files have been written to: /home/robledo/source/codecrafters-dns-server-c/cmake-build-debug

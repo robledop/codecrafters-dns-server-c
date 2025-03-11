@@ -2,6 +2,16 @@
 
 #include <stdint.h>
 
+#include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netinet/ip.h>
+#include <string.h>
+#include <errno.h>
+#include <unistd.h>
+
 #define HEADER_SIZE 12
 
 // ###############################################
@@ -17,6 +27,30 @@
 #define DNS_FLAG_RA 0x0080
 #define DNS_FLAG_Z 0x0070
 #define DNS_FLAG_RCODE 0x000f
+
+#define DNS_QR_QUERY 0
+#define DNS_QR_RESPONSE 1
+
+#define DNS_CLASS_IN 1
+#define DNS_TYPE_A 1
+
+#define DNS_OPCODE_QUERY 0
+#define DNS_OPCODE_IQUERY 1
+#define DNS_OPCODE_STATUS 2
+#define DNS_OPCODE_NOTIFY 4
+#define DNS_OPCODE_UPDATE 5
+
+#define DNS_RCODE_NO_ERROR 0
+#define DNS_RCODE_FORMAT_ERROR 1
+#define DNS_RCODE_SERVER_FAILURE 2
+#define DNS_RCODE_NAME_ERROR 3
+#define DNS_RCODE_NOT_IMPLEMENTED 4
+#define DNS_RCODE_REFUSED 5
+#define DNS_RCODE_YXDOMAIN 6
+#define DNS_RCODE_YXRRSET 7
+#define DNS_RCODE_NXRRSET 8
+#define DNS_RCODE_NOTAUTH 9
+#define DNS_RCODE_NOTZONE 10
 
 struct dns_header
 {
@@ -73,6 +107,9 @@ struct q_name
 
 struct dns_question* parse_questions(char* buffer, int qdcount, int* questions_length);
 struct dns_record* parse_answers(char* buffer, int questions_length, int ancount, int* answers_length);
+int pack_message(struct dns_message message, char (*output)[512]);
+int parse_message(char* buffer, struct dns_message* message_out);
+
 struct q_name* decode_domain_name(const char* buffer);
 int encode_question(const char* domain_name, uint16_t qtype, uint16_t qclass, char encoded_question[static 256]);
 int encode_record(
@@ -84,5 +121,3 @@ int encode_record(
     uint8_t data[static 1],
     char encoded_record[static 256]
 );
-int pack_message(struct dns_message message, char (*output)[512]);
-int parse_message(char* buffer, struct dns_message* message_out);

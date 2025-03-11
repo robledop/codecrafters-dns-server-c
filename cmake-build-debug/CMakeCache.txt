@@ -215,6 +215,12 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//No help, variable specified on the command line.
+Python3_EXECUTABLE:UNINITIALIZED=/usr/bin/python3
+
+//No help, variable specified on the command line.
+Python_EXECUTABLE:UNINITIALIZED=/usr/bin/python3
+
 //Value Computed by CMake
 codecrafters-dns-server_BINARY_DIR:STATIC=/home/robledo/source/codecrafters-dns-server-c/cmake-build-debug
 

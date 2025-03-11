@@ -49,6 +49,14 @@ cmake_ninja_workdir = /home/robledo/source/codecrafters-dns-server-c/cmake-build
 
 build cmake_object_order_depends_target_dns-server: phony || .
 
+build CMakeFiles/dns-server.dir/src/dns.c.o: C_COMPILER__dns-server_unscanned_Debug /home/robledo/source/codecrafters-dns-server-c/src/dns.c || cmake_object_order_depends_target_dns-server
+  DEP_FILE = CMakeFiles/dns-server.dir/src/dns.c.o.d
+  FLAGS = -g -std=gnu2x -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/dns-server.dir
+  OBJECT_FILE_DIR = CMakeFiles/dns-server.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/dns-server.dir/
+  TARGET_PDB = dns-server.pdb
+
 build CMakeFiles/dns-server.dir/src/main.c.o: C_COMPILER__dns-server_unscanned_Debug /home/robledo/source/codecrafters-dns-server-c/src/main.c || cmake_object_order_depends_target_dns-server
   DEP_FILE = CMakeFiles/dns-server.dir/src/main.c.o.d
   FLAGS = -g -std=gnu2x -fdiagnostics-color=always
@@ -65,7 +73,7 @@ build CMakeFiles/dns-server.dir/src/main.c.o: C_COMPILER__dns-server_unscanned_D
 #############################################
 # Link the executable dns-server
 
-build dns-server: C_EXECUTABLE_LINKER__dns-server_Debug CMakeFiles/dns-server.dir/src/main.c.o
+build dns-server: C_EXECUTABLE_LINKER__dns-server_Debug CMakeFiles/dns-server.dir/src/dns.c.o CMakeFiles/dns-server.dir/src/main.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/dns-server.dir
   POST_BUILD = :
